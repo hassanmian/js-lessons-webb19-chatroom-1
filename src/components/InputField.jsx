@@ -6,8 +6,10 @@ export default function InputField(props) {
     <div className="form-group">
       <LabelComponent label={props.label} />
       <input 
-        ref={props.myRef} 
+        name={props.name}
         className="form-control" 
+        value={props.value}
+        onChange={props.handleOnChange}
         placeholder={props.placeholder} 
       />
     </div>
