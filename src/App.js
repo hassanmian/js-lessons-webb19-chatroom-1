@@ -13,8 +13,8 @@ function App() {
     message: "",
     feeling: ""
   })
-  const chatRoomURL = "https://mock-data-api.firebaseio.com/chatrooms/MF_cHwY2pj8e8zwu8eO.json"
-  const messageURL = "https://mock-data-api.firebaseio.com/chatrooms/MF_cHwY2pj8e8zwu8eO/messages.json"
+  const chatRoomURL = "https://mock-data-api.firebaseio.com/chatrooms/-MKZDwqIZeWUA2WoqklB.json"
+  const messageURL = "https://mock-data-api.firebaseio.com/chatrooms/-MKZDwqIZeWUA2WoqklB/messages.json"
 
 
   function fetchChatRoomData() {
