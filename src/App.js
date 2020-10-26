@@ -13,8 +13,8 @@ function App() {
     message: "",
     feeling: ""
   })
-  const chatRoomURL = "https://mock-data-api.firebaseio.com/chatrooms/-MKZDwqIZeWUA2WoqklB.json"
-  const messageURL = "https://mock-data-api.firebaseio.com/chatrooms/-MKZDwqIZeWUA2WoqklB/messages.json"
+  const chatRoomURL = "https://mock-data-api-2.firebaseio.com/chatrooms/-MKZDwqIZeWUA2WoqklB.json"
+  const messageURL = "https://mock-data-api-2.firebaseio.com/chatrooms/-MKZDwqIZeWUA2WoqklB/messages.json"
 
 
   function fetchChatRoomData() {
@@ -36,7 +36,6 @@ function App() {
       setFormData({
         name: "",
         message: "",
-        feeling: ""
       })
     })
   }
@@ -84,9 +83,10 @@ function App() {
       </div>
 
       <div className="row mt-5">
+        {console.log(chatRoomData)}
         {chatRoomData && <Heading3 heading={chatRoomData.name} /> }
 
-        {chatRoomData && Object.entries(chatRoomData.messages).reverse().map((messageItem, index) => {
+        {chatRoomData && chatRoomData.messages && Object.entries(chatRoomData.messages).reverse().map((messageItem, index) => {
           return (
             <MessageItem 
               key={index}
